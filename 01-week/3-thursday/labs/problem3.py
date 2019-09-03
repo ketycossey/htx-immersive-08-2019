@@ -1,0 +1,5 @@
+name = input('what is your name?')
+name = name.upper()
+favorite_subject = input ('what is your favorite subject?')
+favorite_subject = favorite_subject.upper()
+print (f'{name}\'s favorite subject is {favorite_subject}')
