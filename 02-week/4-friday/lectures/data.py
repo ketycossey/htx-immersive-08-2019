@@ -16,3 +16,4 @@ positions = {
     '8': (2, 1),
     '9': (2, 2),
 }
+print(board)

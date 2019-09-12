@@ -16,3 +16,4 @@ def board(current_player):
     print(f"{data.board[2][0]} | {data.board[2][1]} | {data.board[2][2]}")
     print()
     print(f"Player {current_player}'s turn")
+print(board)
