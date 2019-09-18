@@ -1,0 +1,8 @@
+
+* {
+    box-sizing: border-box;
+  }
+body{
+    background-image: url("front2.jpg"), url("front1.jpg");
+    background-color: #cccccc;
+  }

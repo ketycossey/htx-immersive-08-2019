@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<Style>
+
+* {
+        box-sizing: border-box;
+    }
+body{
+    display:flex;
+    height: 100vh; 
+    width: 100%; 
+    background-color: black;
+    
+
+}
+
+.wrapper{
+    background-color: lightgray;
+    float:left;
+    display:flex;
+    flex-direction:row;
+}
+
+.flex-container{
+    height: 600px;
+    width: 700px;
+    display:flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 1;
+
+
+}
+.big-column1{
+    height: 500px;
+    width: 192px;
+    display:flex;
+    float: left; 
+    border-style: solid;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-grow: 1;
+
+}
+.big-column2{
+    height: 500px;
+    width: 192px;
+    display:flex;
+    border-style: solid;
+    flex-wrap: wrap;
+
+    
+
+}
+.big-column3{
+    height: 500px;
+    width: 192px;
+    display:flex;
+    float: left;
+    border-style: solid;
+    flex-wrap: wrap;
+ 
+    
+
+}
+
+.rectangle1{
+    height:96px;
+    width:40px;
+    background-color:yellow;
+    border-style: solid;
+  
+    padding: 15px;
+}
+.rectangle2{
+    height:64px;
+    width:64px;
+    background-color:red;
+    border-style: solid;
+}
+.rectangle3{
+    height:32px;
+    width:64px;
+    background-color:blue;
+    border-style: solid;
+}
+
+.rectangle4{
+    height:64px;
+    width:96px;
+    background-color:purple;
+    border-style: solid;
+}
+
+
+.rectangle5{
+    height:150px;
+    width:150px;
+    background-color:lightpink;
+    border-style: solid;
+}
+.rectangle6{
+    height:64px;
+    width:32px;
+    background-color:gray;
+    border-style: solid;
+}
+
+
+
+.rectangle7{
+    height:32px;
+    width:128px;
+    background-color:green;
+    border-style: solid;
+}
+
+.rectangle8{
+    height:32px;
+    width:96px;
+    background-color:orange;
+    border-style: solid;
+}
+
+.rectangle9{
+    height:64px;
+    width:92px;
+    background-color: teal;
+    border-style: solid;
+}
+
+.rectangle10{
+    height:32px;
+    width:32px;
+    background-color:black;
+    border-style: solid;
+}
+
+.flex-container::before,
+.flex-container::after{
+    content:" ";
+    flex-basis: 100%;
+    width: 0;
+    order: 2;
+}
+
+</Style>
+
+
+
+
+
+
+
+
+<body>
+<div class = "wrapper">
+    <div class ="flex-container">flex-container
+        <div class ="big-column1">big-column1
+            <div class = 'rectangle3'>rectangle3</div>
+            <div class = 'rectangle7'>rectangle7</div>
+            <div class = 'rectangle6'>rectangle6</div>
+            <div class = 'rectangle5'>rectangle5</div>
+            <div class = 'rectangle1'>rectangle1</div>    
+            <div class = 'rectangle1'>rectangle1</div>  
+             <div class = 'rectangle2'>rectangle2</div>
+             <div class = 'rectangle3'>rectangle3</div>
+             <div class = 'rectangle3'>rectangle3</div>
+             <div class = 'rectangle2'>rectangle2</div>
+             <div class = 'rectangle3'>rectangle3</div>
+             <div class = 'rectangle4'>rectangle4</div>
+             <div class = 'rectangle6'>rectangle6</div>
+             <div class = 'rectangle7'>rectangle7</div>
+             <div class = 'rectangle9'>rectangle9</div>
+             <div class = 'rectangle9'>rectangle9</div>
+
+
+            
+        </div>
+
+        <div class ="big-column2">big-column1
+                <div class = 'rectangle4'>rectangle4</div>  
+                <div class = 'rectangle4'>rectangle4</div>  
+                <div class = 'rectangle4'>rectangle4</div>  
+                <div class = 'rectangle4'>rectangle4</div>  
+                <div class = 'rectangle4'>rectangle4</div>  
+                <div class = 'rectangle4'>rectangle4</div>    
+                <div class = 'rectangle6'>rectangle6</div>
+                <div class = 'rectangle6'>rectangle6</div>
+                <div class = 'rectangle6'>rectangle6</div>
+                <div class = 'rectangle8'>rectangle8</div>
+                <div class = 'rectangle8'>rectangle8</div>
+                <div class = 'rectangle8'>rectangle8</div>
+                <div class = 'rectangle10'>rectangle10</div>
+                <div class = 'rectangle10'>rectangle10</div>
+        </div>
+
+        <div class ="big-column3">big-column1
+                <div class = 'rectangle1'>rectangle1</div>    
+                <div class = 'rectangle1'>rectangle1</div>    
+                <div class = 'rectangle2'>rectangle2</div>
+                 <div class = 'rectangle2'>rectangle2</div>
+                 <div class = 'rectangle3'>rectangle3</div>
+                 <div class = 'rectangle3'>rectangle3</div>
+                 <div class = 'rectangle3'>rectangle3</div>
+                 <div class = 'rectangle3'>rectangle3</div>
+                 <div class = 'rectangle3'>rectangle3</div>
+                 <div class = 'rectangle5'>rectangle5</div>
+                 <div class = 'rectangle6'>rectangle6</div>
+                 <div class = 'rectangle7'>rectangle7</div>
+                 <div class = 'rectangle7'>rectangle7</div>
+                 <div class = 'rectangle9'>rectangle10</div>
+                 <div class = 'rectangle9'>rectangle10</div>
+
+            </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
