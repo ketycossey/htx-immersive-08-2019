@@ -1,0 +1,35 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: flex ;
+    font-family:sans-serif;
+    align-items: center;
+}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color:white;
+    background-color: 52a6fa;
+    padding: 20px;
+
+}
+header a {
+    color: white;
+    text-decoration: none
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    margin:0;
+}
+
+header ul li{
+    float:left;
+    margin-right: 10px;
+}

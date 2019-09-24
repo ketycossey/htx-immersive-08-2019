@@ -1,0 +1,160 @@
+body {
+    font-family:"sans-serif; verdana";
+    font-style: oblique;
+    font-size: 30px
+}
+  
+img{
+    height: 100%;
+    margin-left: 20px 
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+   
+  #table {
+    padding: 50px 40px;
+    border: 6px solid #3a3733;
+    border-radius: 70px;
+    background: linear-gradient(#d3afbe 0%, #665212 40%, #979527 100%) no-repeat no-repeat;
+  
+} 
+  
+
+.hand {
+    padding: 10px;
+    border-radius: 50px;
+    height: 200px;
+    background: #bfbfe6;
+    margin-bottom: 10px;
+    float: none;
+}
+       
+  .hand label {
+    float: left; 
+    margin: 0 7px;
+    border-block-color: pink;
+    border-block-start-style: ridge;
+    border-radius: 50 px; */
+
+
+  }
+ .handImg {
+    width: 100px; 
+    height: 100%; 
+    display: block;
+    float: left; 
+    margin-left: 40px;
+    border-radius:10px;
+    
+
+  } 
+ .buttons button {
+    border: 2px solid  rgb(49, 38, 38);
+    border-radius: 5px;;
+    background: lavender;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    font-family:"sans-serif; verdana";
+    font-style: oblique;
+    color: red;
+    text-align: center;
+  }
+
+     
+  #messages {
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 5px;
+    height: 2em;
+  }
+  
+/*   
+ .card {
+      height: 100%;
+  }
+
+
+ */
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   
+  .buttons {
+    text-align: center;
+  }
+  
+  
+  .buttons button:hover {
+    box-shadow: 0px 1px 1px black;
+  }
+  
+  .buttons button:focus {
+    outline: none;
+  }
+  
+  .buttons button:active {
+    color: white;
+    background: linear-gradient(#666, #222);
+    border: 1px solid black;
+  }
+  
+  .card {
+    height: 100%;
+  }
+   */ */ */ */
