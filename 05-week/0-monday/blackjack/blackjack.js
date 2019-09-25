@@ -1,62 +1,79 @@
-// // // Creates card
-// // var cardImage= document.createElement("img")
-// // cardImage.setAttribute("src", "images/10_of_clubs.png") // replace card with function
 
-// // Adds card to player hand
+var dealerHand= [];
+var playerHand=[];
+var suits = ['Spades', 'Hearts', 'Diamonds', 'Clubs'];
+var values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+var deck = new Array();
 
-// var cardsInDeck = new Array();
-// var numberOfCardsInDeck = 52;
-// function deal(value, person){
-
-// if (numberOfCardsInDeck ==0) return false;
-// var img = document.createElement("img");
-// img.src ="images/" + cardsInDeck[value] + ".png";
-// img.setAttribute("src", "images/", ".png") ;
-// // document.getElementById(person + "-hand").appendChild(img);
-
-// // document.body.appendChild(img);
-// removeCard(value)
-
-
-// document.getElementById("player-hand").appendChild(img)
-// document.getElementById("dealer-hand").appendChild(img)
-
-
-// }   
-   
-//     // createCard('9_of_hearts', 'dealer')
-//     // createCard('9_of_hearts', 'dealer')
-//     // createCard('9_of_hearts', 'player')
-//     // createCard('9_of_hearts', 'player')
-// // };
-
-//    document.getElementById('deal-button').addEventListener('click', deal(randomCard()));
-
-//    function randomCard(){
-//     return Math.floor(Math.random()*numberOfCardsInDeck);
-// }
-
-// function removeCard(c){
-// for (j = c; j<=numberOfCardsInDeck-2; j++){
-//     cardsInDeck[j] = cardsInDeck[j+1]
-// }
-//     numberOfCardsInDeck --;
-// }
-// // document.getElementById(“hit-button”).addEventListener(“click”, deal(randomCard));
-
-// // document.getElementById(stand-button”).addEventListener(“click”, deal);
-
-function createCard(value, person) {
-    let img = document.createElement('img');
-    img.src= 'images/' + value + '.png';
-    img.setAttribute('class', 'img');
-    document.getElementById(person + '-hand').appendChild(img);
- }
  
- var deal = () => {
-    createCard('9_of_hearts', 'dealer')
-    createCard('9_of_hearts', 'dealer')
-    createCard('9_of_hearts', 'player')
-    createCard('9_of_hearts', 'player')
- }
- document.getElementById('deal-button').addEventListener('click', deal);
+function createDeck()
+   {
+       deck = new Array();
+       for (var i = 0 ; i < suits.length; i++)
+       {
+           for(var x = 0; x < values.length; x++)
+           {
+               var card ={Value: values[x], Suit: suits[i]}
+               deck.push(card);
+              
+       }
+   }
+   return deck;
+}
+console.log(createDeck())
+console.log(deck)
+
+ 
+function randomCard(){
+    return  deck[ Math.floor(Math.random()* deck.length)]; 
+   }
+   
+randomCard()
+// console.log (randomCard())
+
+
+
+ 
+function dealCard(i){
+ 
+    if (deck ==0) return false;
+    var img = document.createElement("img");
+    
+    img.src = ("images/" + deck[i].Value + '_of_'+ deck[i].Suit + ".png");
+    //img.setAttribute("src", "images/", ".png") ;
+    //console.log("images/" + deck[i].Value + '_of_'+deck[i].Suit + ".png");
+    document.body.appendChild(img);
+
+    document.getElementById('player-hand').appendChild(img)
+
+    removeCard(i)
+
+}
+dealCard(0) //DEBUG
+//console.log(dealCard(5))
+ 
+
+    
+function removeCard(c){
+    for (j = c; j<=deck-2; j++){
+       deck[j] = deck[j+1]
+    }
+    deck--
+    }
+    
+ 
+    function dealButton(){
+        var card, value;
+        document.getElementById('deal-button').addEventListener('click', dealCard);
+        // dealCard(playerHand, '#player-hand');
+        // dealCard(dealerHand, '#dealer-hand');
+        // dealCard(playerHand, '#player-hand');
+        // dealCard(dealerHand, '#dealer-hand');
+         
+        console.log('playerHand', playerHand);
+        console.log('dealerHand', dealerHand);
+         
+        }
+         
+  dealButton()      
+
