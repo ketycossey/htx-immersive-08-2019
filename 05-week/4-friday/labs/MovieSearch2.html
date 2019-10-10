@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MovieSearch2</title>
+</head>
+<body>
+    <div class = "container">
+        <h2>Movie Search </h2>   
+    <form>
+        <div>
+            <label for = "text">Name of Movie</label>
+            <input type = "text" id= "text">
+        </div>
+    <div>
+    <button class="get-movies">Get Movie</button>
+    </div>
+    </form>
+        <ul class="movie"></ul>
+</div>
+
+<script>
+
+document.querySelector('.get-movies').addEventListener('click', getMovies);
+
+function getMovies(e) {
+  const text = document.querySelector('input[type="text"]').value;
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('GET', "http://www.omdbapi.com/?s=Search&apikey=9facd5ec", true);
+
+  xhr.onload = function() {
+    if(this.status === 200) {
+      const response = JSON.parse(this.responseText);
+      console.log(response)
+      let output = '';
+
+      if(response.type === 'success') {
+        response.value.forEach(function(Search){
+          output += `<li>${Search.Title}</li>`;
+          output += `<li>${Search.Year}</li>`;
+          output += `<li>${Search.Poster}</li>`;
+
+        });
+      } else {
+        output += '<li>Something went wrong</li>';
+      }
+
+    //  document.querySelector('.movie').innerHTML = output;
+    }
+  }
+
+  xhr.send();
+
+  e.preventDefault();
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

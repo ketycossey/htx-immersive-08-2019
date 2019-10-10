@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>horseRace</title>
+</head>
+<button type="button" onclick="startingRace()">START</button>
+<div id = "horse1"></div>
+    <div id="horse2"></div>
+    <div id = "horse3"></div>
+    <div id="horse4"></div>
+    <div id = "horse5"></div>
+  
+
+<body>
+
+<script>
+
+var maxTime = 10;
+function startingRace(){
+    var A = Date.now();
+
+    var horse1 = new Promise(function(resolve, reject) {
+        var horse1startTime = 0;
+        setTimeout(function() { 
+            horse1startTime = Math.floor((Date.now() - A) / 1000);
+            resolve(horse1startTime)
+        },Math.random()*maxTime*1000);
+    });
+    
+    var horse2 = new Promise(function(resolve, reject) {
+        var horse2startTime = 0;
+        setTimeout(function() { 
+            horse2startTime = Math.floor((Date.now() - A) / 1000);
+            resolve(horse2startTime)
+        },Math.random()*maxTime*1000);
+    });
+    
+    var horse3 = new Promise(function(resolve, reject) {
+        var horse3startTime = 0;
+        setTimeout(function() { 
+            horse3startTime = Math.floor((Date.now() - A) / 1000);
+            resolve(horse3startTime)
+        },Math.random()*maxTime*1000);
+    });
+
+    var horse4= new Promise(function(resolve, reject) {
+        var horse4startTime= 0;
+        setTimeout(function() { 
+            horse4startTime = Math.floor((Date.now() - A) / 1000);
+            resolve(horse4startTime)
+        },Math.random()*maxTime*1000);
+    });
+
+    var horse5 = new Promise(function(resolve, reject) {
+        var horse5startTime = 0;
+        setTimeout(function() { 
+            horse5startTime = Math.floor((Date.now() - A) / 1000);
+            resolve(horse5startTime)
+        },Math.random()*maxTime*1000);
+    });
+
+    horse1.then(function(horse1startTime){
+    document.getElementById("horse1").innerHTML = "horse1             " + horse1startTime;
+    });
+    horse2.then(function(horse2startTime){
+    document.getElementById("horse2").innerHTML = "horse2             " + horse2startTime;
+    });
+    horse3.then(function(horse3startTime){
+    document.getElementById("horse3").innerHTML = "horse3              " + horse3startTime;
+    });
+    horse4.then(function(horse4startTime){
+    document.getElementById("horse4").innerHTML = "horse4             " + horse4startTime;
+    });
+
+    horse5.then(function(horse5startTime){
+    document.getElementById("horse5").innerHTML = "horse5             " + horse5startTime;
+    });
+   
+
+
+    } // Dont delete
+startingRace()
+</script>  
+
+
+</body>
+</html>

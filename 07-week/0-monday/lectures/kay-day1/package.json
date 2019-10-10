@@ -1,0 +1,14 @@
+{
+  "name": "kay-day1",
+  "version": "1.0.0",
+  "description": "day one of node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kay",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.4.0"
+  }
+}

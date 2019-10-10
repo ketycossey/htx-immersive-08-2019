@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>promiseCharacters</title>
+
+
+
+</head>
+<body>
+<script>
+//      function myAsyncFunction (https://anapioficeandfire.com/api/books/1) {
+//      promise = new Promise((resolve, reject) => {
+//     const xhr = new XMLHttpRequest();
+//     xhr.open("GET", 'https://anapioficeandfire.com/api/books/1', true);
+//     xhr.onload = () => resolve(JSON.parse = data);
+//     data.povCharacters;
+//     data.released;
+//     data.name
+//     console.log(povCharacters)
+
+//     xhr.onerror = () => reject(xhr.statusText);
+//     xhr.send();
+//   });
+    
+var gameOfRequest = fetch("https://anapioficeandfire.com/api/books/1 ")
+    gameOfRequest
+    .then(response=> {
+        if (response.status !=200){
+            throw "check again";
+
+        }else {
+            return response;
+        }
+    })
+  .then(response => {
+      console.log(response);
+  })
+.catch (reason =>{
+    alert(reason);
+})
+
+
+var book;
+
+gameOfRequest
+  .then(response => response.json()) // => no '{}' returns
+  .then(bodyObject => {
+    console.log(bodyObject);
+     return bodyObject;
+  })
+   .then(bookData => {
+     book = bookData 
+    });
+    console.log(bookData.characters)
+    
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+</body>
+</html>

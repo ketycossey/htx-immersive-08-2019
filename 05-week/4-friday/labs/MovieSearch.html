@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MovieSearch</title>
+</head>
+<body>
+
+<!-- <form   onsubmit= "nameOfMovie()"> -->
+    <!-- <form onsubmit= "nameOfMovie()"> -->
+        <form>
+    Enter movie: <input type="text"  movie="movieName">
+    <!-- <button onsubmit="nameOfMovie()">search</button> -->
+   
+    <input type="submit" value="Submit" onsubmit="nameOfMovie()">
+</form>
+
+
+
+<script>
+//     Movie search
+// Create a new app that lets the user search for movies by title. 
+// Sign up for an API key and use the data from the Open Movie Database or from The Movie DB.
+function nameOfMovie (){
+var movieUrl =  "http://www.omdbapi.com/?s=Search&apikey=e701090c";
+let request = new XMLHttpRequest();
+request.open("GET", movieUrl);
+request.send();
+request.onload = () => {
+   let movieResponse = JSON.parse(request.responseText);
+   let searchResults = movieResponse.Search
+   console.log(searchResults)
+   let img = searchResults.forEach(createImg)
+   function createImg(movie){
+       console.log(movie.Title)
+       console.log(movie.Poster)
+       let title = document.createElement("h3");
+       title.innerHTML = movie.Title;
+       let year = document.createElement("h4");
+       year.innerHTML = movie.Year;
+       document.body.appendChild(title);
+       document.body.appendChild(year);
+       let img = document.createElement("img");
+       img.src = movie.Poster;
+       document.body.appendChild(img);
+   }
+}
+
+}
+
+//document.querySelector('.get-movies').addEventListener('click', getMovies);
+
+
+
+
+
+// Provide the user with a form so that they can enter a movie title. On submit, make the fetch() request to the API. 
+// Add a Reset button that clears the form and the movie information on the page.
+
+// After you have confirmed that you can successfully fetch() data and .catch() errors, 
+// cache the data to localStorage so that your app doesn't need to make a network request 
+// for any locally stored movie data.
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    
+</script>
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</body>
+</html>

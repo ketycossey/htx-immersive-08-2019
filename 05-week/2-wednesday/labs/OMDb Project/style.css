@@ -1,0 +1,39 @@
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+
+.container{
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+     align-content: center;
+    padding: inherit;
+    background-color:gray;
+}
+.row {
+    text-align: center;
+    align-content: center;
+}
+    
+.h2 {
+    font-weight: normal;
+    color: purple;
+    text-decoration: underline;
+}
+.img{
+    border: 2 px solid black; 
+    border-radius: 25 px;
+    opacity: 0.5;
+    transition: 0.25s ease-in-out;
+    align-content: center;
+    
+}
+.img: hover{
+    opacity: (0, 0, 1;
+}

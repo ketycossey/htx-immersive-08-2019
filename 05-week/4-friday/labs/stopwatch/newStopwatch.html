@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>StopWatch</title>
+</head>
+<body>
+    <button type="button" onclick="startStopWatch()">start</button>
+    <div class="asdf"></div> 
+    <div id="elapsed-time"></div>
+    
+    
+    
+    <p> hello</p>
+
+
+
+<script>
+
+var maxTime = 10;
+function startStopWatch(){
+    var A = Date.now(); 
+    var firstPromise = new Promise(function(resolve, reject) {
+        var startTime = 0;
+        setTimeout(function() { 
+            startTime = Math.floor((Date.now() - A) / 1000);
+            resolve(startTime)
+        },Math.random()*maxTime*1000);
+    });
+    firstPromise.then(function(startTime){
+        document.getElementById("elapsed-time").innerHTML = "Seconds Elapsed  " + startTime;
+
+
+    });
+}
+
+// function timerText(text){
+//     document.getElementById("elapsed-time").innerHTML = text;
+// }
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

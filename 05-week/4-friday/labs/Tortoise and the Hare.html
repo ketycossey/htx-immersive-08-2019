@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tortoise and the Hare</title>
+</head>
+<button type="button" onclick="startingRace()">START</button>
+    <div id = "tortoise"></div>
+    <div id="hare"></div>
+
+<body>
+    <script>
+
+var maxTime = 10;
+function startingRace(){
+    var A = Date.now();
+
+    var tortoise = new Promise(function(resolve, reject) {
+        var startTime = 0;
+        setTimeout(function() { 
+            startTime = Math.floor((Date.now() - A) / 1000);
+            resolve(startTime)
+        },Math.random()*maxTime*1000);
+    });
+    
+    var hare = new Promise(function(resolve, reject) {
+        var hareStartTime = 0;
+        setTimeout(function() { 
+            hareStartTime = Math.floor((Date.now() - A) / 1000);
+            resolve(hareStartTime)
+        },Math.random()*maxTime*1000);
+    });
+    
+    hare.then(function(hareStartTime){
+    document.getElementById("hare").innerHTML = "Hare   " + hareStartTime;
+    });
+    tortoise.then(function(startTime){
+    document.getElementById("tortoise").innerHTML = "Tortoise  " + startTime;
+    });
+
+
+    function winner(){
+        setTimeout(function() { alert("my message"); }, 10000);
+        if (tortoise > hare){
+        window.alert("Hare won");}
+        else {
+            window.alert("Turtle Won");
+        }
+    }
+    winner()
+    } // Dont delete
+
+
+
+
+
+        
+        
+        
+        
+    </script>
+
+
+
+
+</body>
+</html>
