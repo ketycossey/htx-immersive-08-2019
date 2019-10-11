@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+// add routes
+
 router.get("/", (req, res) => {
   console.log(req.session.email);
   if (req.session && req.session.name) {
@@ -43,6 +45,8 @@ router.get("/dashboard", (req, res) => {
   }
   res.render("dashboard", data);
 });
+
+
 
 router.get("/logout", (req, res) => {
   req.session.destroy(() => {
